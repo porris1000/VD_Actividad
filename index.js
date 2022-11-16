@@ -1,50 +1,34 @@
 // Import stylesheets
 import './style.css';
 
-var data = [
-  { year: 1991, name: 'Alemania', value: 15 },
-  { year: 1992, name: 'alpha', value: 34 },
-  { year: 1991, name: 'alpha2', value: 17 },
-  { year: 1992, name: 'alpha2', value: 65 },
-  { year: 1991, name: 'beta', value: 10 },
-  { year: 1992, name: 'beta', value: 10 },
-  { year: 1991, name: 'beta2', value: 40 },
-  { year: 1992, name: 'beta2', value: 38 },
-  { year: 1991, name: 'gamma', value: 5 },
-  { year: 1992, name: 'gamma', value: 10 },
-  { year: 1991, name: 'gamma2', value: 20 },
-  { year: 1992, name: 'gamma2', value: 34 },
-  { year: 1991, name: 'delta', value: 50 },
-  { year: 1992, name: 'delta', value: 43 },
-  { year: 1991, name: 'delta2', value: 17 },
-  { year: 1992, name: 'delta2', value: 35 },
-];
-
 var data1 = [
-  { name: 'Alemania', value: 15 },
-  { name: 'alpha', value: 34 },
-  { name: 'alpha2', value: 17 },
-  { name: 'alpha2', value: 65 },
-  { name: 'beta', value: 10 },
-  { name: 'beta', value: 10 },
-  { name: 'beta2', value: 40 },
-  { name: 'beta2', value: 38 },
-  { name: 'gamma', value: 5 },
-  { name: 'gamma', value: 10 },
-  { name: 'gamma2', value: 20 },
-  { name: 'gamma2', value: 34 },
-  { name: 'delta', value: 50 },
-  { name: 'delta', value: 43 },
-  { name: 'delta2', value: 17 },
-  { name: 'delta2', value: 35 },
+  { name: 'index', country: 'India', index: 0.629 },
+  { name: 'index', country: 'Arabia Saudita', index: 0.636 },
+  { name: 'index', country: 'Turquía', index: 0.639 },
+  { name: 'index', country: 'Japón', index: 0.65 },
+  { name: 'index', country: 'China', index: 0.682 },
+  { name: 'index', country: 'Corea del Sur', index: 0.689 },
+  { name: 'index', country: 'Brasil', index: 0.696 },
+  { name: 'index', country: 'Indonesia', index: 0.697 },
+  { name: 'index', country: 'Italia', index: 0.72 },
+  { name: 'index', country: 'Australia', index: 0.738 },
+  { name: 'index', country: 'Argentina', index: 0.756 },
+  { name: 'index', country: 'México', index: 0.764 },
+  { name: 'index', country: 'Estados Unidos', index: 0.769 },
+  { name: 'index', country: 'Canadá', index: 0.772 },
+  { name: 'index', country: 'Reino Unido', index: 0.78 },
+  { name: 'index', country: 'Sudáfrica', index: 0.782 },
+  { name: 'index', country: 'España', index: 0.788 },
+  { name: 'index', country: 'Francia', index: 0.791 },
+  { name: 'index', country: 'Alemania', index: 0.801 },
 ];
 
 var visualization = d3plus
   .viz()
   .container('#viz1')
-  .data(data)
+  .data(data1)
   .type('bar')
   .id('name')
-  .x('name')
-  .y('value')
+  .x('country')
+  .y('index')
   .draw();
