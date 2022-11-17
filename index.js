@@ -27,11 +27,23 @@ var visualization = d3plus
   .viz()
   .container('#viz1')
   .data(data1)
-  .sort('index')
   .type('bar')
   .id('country')
-  .x('index')
+  .x('country')
   .y('index')
+  .sort((a, b) => a['ID Travel Time'] - b['ID Travel Time'])
   .color('index')
-  .xaxis('country')
+  .draw();
+
+var visualization = d3plus
+  .viz()
+  .container('#viz2')
+  .data(data1, '%')
+  .type('line')
+  .id('country')
+  .x('country')
+  .y('index', (d) => '${parseInt(d * 100)}%')
+  //.ytickFormat(d => "${parseInt(d * 100)}%")
+  .color('index')
+  .title('Aquí va el título')
   .draw();
