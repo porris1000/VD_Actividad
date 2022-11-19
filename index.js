@@ -33,12 +33,11 @@ var visualization = d3plus
   .type('line')
   .id('name')
   .x('year')
+  .x({ label: 'Año' })
   .y('index')
   .y({ range: [0.7, 0.8] })
   .y({ scale: 'share' })
-  .axes({ ticks: 'false' })
-
-  .tooltip({ scale: 'share' })
+  .y({ label: 'Índice Global de Brecha de Género' })
   .title('España: Evolución del Índice de Brecha de Género')
   .title({
     sub: 'Chart: Ana Porras, Source: Expansión Datos Macro, Created with D3plus',
@@ -218,9 +217,11 @@ var visualization = d3plus
   .type('line')
   .id('name')
   .x('year')
+  .x({ label: 'Año' })
   .y('index')
   .y({ range: [0.7, 1] })
   .y({ scale: 'share' })
+  .y({ label: 'Índice Global de Brecha de Género' })
   .title('España: Estimación del cierre de la Brecha de Género')
   .title({
     sub: 'Chart: Ana Porras, Source: Expansión Datos Macro, Created with D3plus',
