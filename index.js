@@ -36,6 +36,9 @@ var visualization = d3plus
   .y('index')
   .y({ range: [0.7, 0.8] })
   .y({ scale: 'share' })
+  .axes({ ticks: 'false' })
+
+  .tooltip({ scale: 'share' })
   .title('España: Evolución del Índice de Brecha de Género')
   .title({
     sub: 'Chart: Ana Porras, Source: Expansión Datos Macro, Created with D3plus',
@@ -127,6 +130,87 @@ var data2 = [
   { name: 'Estimación', year: 2083, index: 1.0019 },
 ];
 
+var data3 = [
+  { name: 'España', year: 2006, time: 2006, index: 0.7319 },
+  { name: 'España', year: 2007, time: 2006, index: 0.7444 },
+  { name: 'España', year: 2008, time: 2006, index: 0.7281 },
+  { name: 'España', year: 2009, time: 2006, index: 0.7345 },
+  { name: 'España', year: 2010, time: 2006, index: 0.7554 },
+  { name: 'España', year: 2011, time: 2006, index: 0.758 },
+  { name: 'España', year: 2012, time: 2006, index: 0.7266 },
+  { name: 'España', year: 2013, time: 2013, index: 0.7266 },
+  { name: 'España', year: 2014, time: 2013, index: 0.7325 },
+  { name: 'España', year: 2015, time: 2013, index: 0.742 },
+  { name: 'España', year: 2016, time: 2013, index: 0.7384 },
+  { name: 'España', year: 2017, time: 2013, index: 0.746 },
+  { name: 'España', year: 2018, time: 2013, index: 0.746 },
+  { name: 'España', year: 2019, time: 2013, index: 0.7705 },
+  { name: 'España', year: 2020, time: 2020, index: 0.795 },
+  { name: 'España', year: 2021, time: 2020, index: 0.788 },
+  { name: 'España', year: 2022, time: 2020, index: 0.788 },
+  { name: 'Estimación', year: 2022, time: 2020, index: 0.788 },
+  { name: 'Estimación', year: 2023, time: 2020, index: 0.7915 },
+  { name: 'Estimación', year: 2024, time: 2020, index: 0.795 },
+  { name: 'Estimación', year: 2025, time: 2020, index: 0.7985 },
+  { name: 'Estimación', year: 2026, time: 2026, index: 0.802 },
+  { name: 'Estimación', year: 2027, time: 2026, index: 0.8055 },
+  { name: 'Estimación', year: 2028, time: 2026, index: 0.809 },
+  { name: 'Estimación', year: 2029, time: 2026, index: 0.8125 },
+  { name: 'Estimación', year: 2030, time: 2026, index: 0.8161 },
+  { name: 'Estimación', year: 2031, time: 2026, index: 0.8196 },
+  { name: 'Estimación', year: 2032, time: 2026, index: 0.8231 },
+  { name: 'Estimación', year: 2033, time: 2033, index: 0.8266 },
+  { name: 'Estimación', year: 2034, time: 2033, index: 0.8301 },
+  { name: 'Estimación', year: 2035, time: 2033, index: 0.8336 },
+  { name: 'Estimación', year: 2036, time: 2033, index: 0.8371 },
+  { name: 'Estimación', year: 2037, time: 2033, index: 0.8406 },
+  { name: 'Estimación', year: 2038, time: 2033, index: 0.8441 },
+  { name: 'Estimación', year: 2039, time: 2033, index: 0.8476 },
+  { name: 'Estimación', year: 2040, time: 2040, index: 0.8511 },
+  { name: 'Estimación', year: 2041, time: 2040, index: 0.8546 },
+  { name: 'Estimación', year: 2042, time: 2040, index: 0.8581 },
+  { name: 'Estimación', year: 2043, time: 2040, index: 0.8616 },
+  { name: 'Estimación', year: 2044, time: 2040, index: 0.8651 },
+  { name: 'Estimación', year: 2045, time: 2040, index: 0.8686 },
+  { name: 'Estimación', year: 2046, time: 2040, index: 0.8722 },
+  { name: 'Estimación', year: 2047, time: 2047, index: 0.8757 },
+  { name: 'Estimación', year: 2048, time: 2047, index: 0.8792 },
+  { name: 'Estimación', year: 2049, time: 2047, index: 0.8827 },
+  { name: 'Estimación', year: 2050, time: 2047, index: 0.8862 },
+  { name: 'Estimación', year: 2051, time: 2047, index: 0.8897 },
+  { name: 'Estimación', year: 2052, time: 2047, index: 0.8932 },
+  { name: 'Estimación', year: 2053, time: 2047, index: 0.8967 },
+  { name: 'Estimación', year: 2054, time: 2054, index: 0.9002 },
+  { name: 'Estimación', year: 2055, time: 2054, index: 0.9037 },
+  { name: 'Estimación', year: 2056, time: 2054, index: 0.9072 },
+  { name: 'Estimación', year: 2057, time: 2054, index: 0.9107 },
+  { name: 'Estimación', year: 2058, time: 2054, index: 0.9142 },
+  { name: 'Estimación', year: 2059, time: 2054, index: 0.9177 },
+  { name: 'Estimación', year: 2060, time: 2054, index: 0.9212 },
+  { name: 'Estimación', year: 2061, time: 2061, index: 0.9247 },
+  { name: 'Estimación', year: 2062, time: 2061, index: 0.9283 },
+  { name: 'Estimación', year: 2063, time: 2061, index: 0.9318 },
+  { name: 'Estimación', year: 2064, time: 2061, index: 0.9353 },
+  { name: 'Estimación', year: 2065, time: 2061, index: 0.9388 },
+  { name: 'Estimación', year: 2066, time: 2061, index: 0.9423 },
+  { name: 'Estimación', year: 2067, time: 2061, index: 0.9458 },
+  { name: 'Estimación', year: 2068, time: 2068, index: 0.9493 },
+  { name: 'Estimación', year: 2069, time: 2068, index: 0.9528 },
+  { name: 'Estimación', year: 2070, time: 2068, index: 0.9563 },
+  { name: 'Estimación', year: 2071, time: 2068, index: 0.9598 },
+  { name: 'Estimación', year: 2072, time: 2068, index: 0.9633 },
+  { name: 'Estimación', year: 2073, time: 2068, index: 0.9668 },
+  { name: 'Estimación', year: 2074, time: 2068, index: 0.9703 },
+  { name: 'Estimación', year: 2075, time: 2075, index: 0.9738 },
+  { name: 'Estimación', year: 2076, time: 2075, index: 0.9773 },
+  { name: 'Estimación', year: 2077, time: 2075, index: 0.9808 },
+  { name: 'Estimación', year: 2078, time: 2075, index: 0.9844 },
+  { name: 'Estimación', year: 2079, time: 2075, index: 0.9879 },
+  { name: 'Estimación', year: 2080, time: 2075, index: 0.9914 },
+  { name: 'Estimación', year: 2081, time: 2075, index: 0.9949 },
+  { name: 'Estimación', year: 2082, time: 2082, index: 0.9984 },
+  { name: 'Estimación', year: 2083, time: 2082, index: 1.0019 },
+];
 var visualization = d3plus
   .viz()
   .container('#viz2')
@@ -145,4 +229,4 @@ var visualization = d3plus
   .attrs(attributes)
   .color('hex')
   .draw();
-//grosor, trama, xticks
+//trama, xticks
