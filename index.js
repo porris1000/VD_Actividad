@@ -1,7 +1,7 @@
 // Import stylesheets
 import './style.css';
 
-var lines = [
+var data1 = [
   { name: 'España', year: 2006, index: 0.7319 },
   { name: 'España', year: 2007, index: 0.7444 },
   { name: 'España', year: 2008, index: 0.7281 },
@@ -21,21 +21,28 @@ var lines = [
   { name: 'España', year: 2022, index: 0.788 },
 ];
 
+var attributes = [
+  { name: 'España', hex: '#89cb0c' },
+  { name: 'Estimación', hex: '#89cb0c' },
+];
+
 var visualization = d3plus
   .viz()
   .container('#viz1')
-  .data(lines)
+  .data(data1)
   .type('line')
-  .shape({ Line: { strokeWidth: 5 } })
   .id('name')
   .x('year')
   .y('index')
   .y({ range: [0.7, 0.8] })
   .y({ scale: 'share' })
   .title('Evolución del Índice de Brecha de Género')
+  .legend(false)
+  .attrs(attributes)
+  .color('hex')
   .draw();
 
-var estimate = [
+var data2 = [
   { name: 'España', year: 2006, index: 0.7319 },
   { name: 'España', year: 2007, index: 0.7444 },
   { name: 'España', year: 2008, index: 0.7281 },
@@ -53,22 +60,6 @@ var estimate = [
   { name: 'España', year: 2020, index: 0.795 },
   { name: 'España', year: 2021, index: 0.788 },
   { name: 'España', year: 2022, index: 0.788 },
-  { name: 'Estimación', year: 2006, index: 0.7319 },
-  { name: 'Estimación', year: 2007, index: 0.7354 },
-  { name: 'Estimación', year: 2008, index: 0.7389 },
-  { name: 'Estimación', year: 2009, index: 0.7424 },
-  { name: 'Estimación', year: 2010, index: 0.7459 },
-  { name: 'Estimación', year: 2011, index: 0.7494 },
-  { name: 'Estimación', year: 2012, index: 0.7529 },
-  { name: 'Estimación', year: 2013, index: 0.7564 },
-  { name: 'Estimación', year: 2014, index: 0.76 },
-  { name: 'Estimación', year: 2015, index: 0.7635 },
-  { name: 'Estimación', year: 2016, index: 0.767 },
-  { name: 'Estimación', year: 2017, index: 0.7705 },
-  { name: 'Estimación', year: 2018, index: 0.774 },
-  { name: 'Estimación', year: 2019, index: 0.7775 },
-  { name: 'Estimación', year: 2020, index: 0.781 },
-  { name: 'Estimación', year: 2021, index: 0.7845 },
   { name: 'Estimación', year: 2022, index: 0.788 },
   { name: 'Estimación', year: 2023, index: 0.7915 },
   { name: 'Estimación', year: 2024, index: 0.795 },
@@ -132,17 +123,20 @@ var estimate = [
   { name: 'Estimación', year: 2082, index: 0.9984 },
   { name: 'Estimación', year: 2083, index: 1.0019 },
 ];
+
 var visualization = d3plus
   .viz()
   .container('#viz2')
-  .data(estimate)
+  .data(data2)
   .type('line')
   .id('name')
   .x('year')
   .y('index')
   .y({ range: [0.7, 1] })
   .y({ scale: 'share' })
-  .legend(true)
+  .legend(false)
+  .attrs(attributes)
+  .color('hex')
   .title('España: Estimación del cierre de la Brecha de Género')
   .draw();
 //legenda, grosor, color, trama
