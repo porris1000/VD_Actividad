@@ -137,12 +137,12 @@ var visualization = d3plus
   .y('index')
   .y({ range: [0.7, 1] })
   .y({ scale: 'share' })
-  .legend(false)
-  .attrs(attributes)
-  .color('hex')
   .title('España: Estimación del cierre de la Brecha de Género')
   .title({
     sub: 'Chart: Ana Porras, Source: Expansión Datos Macro, Created with D3plus',
   })
+  .legend(false)
+  .attrs(attributes)
+  .color('hex')
   .draw();
 //grosor, trama, xticks
