@@ -139,6 +139,13 @@ var visualization = d3plus
   .id('name')
   .x('year')
   .x({ label: 'Año' })
+  .x({
+    ticks: {
+      labels: [
+        2006, 2013, 2020, 2027, 2034, 2041, 2048, 2055, 2062, 2069, 2076, 2083,
+      ],
+    },
+  })
   .y('index')
   .y({ range: [0.7, 1] })
   .y({ scale: 'share' })
