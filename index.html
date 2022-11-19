@@ -68,8 +68,7 @@ Los datos han sido obtenidos de la web Datos Macro de Expansión y, en el caso d
 </br>
 
 <h2>Situación actual</h2>
-<p>El mencionado índice toma valores en la escala de 0% a 100% que se interpretan como la distancia existente hasta la paridad plena, que es representada por el valor 100%. </br>
-La puntuación que obtiene España para este año 2022 es de 78.80%, cuya lectura implica que <b>la brecha de género actual es de 21.20%</b>.</br>
+<p>El mencionado índice toma valores en la escala de 0% a 100% que se interpretan como la distancia existente hasta la paridad plena, que es representada por el valor 100%. La puntuación que obtiene España para este año 2022 es de 78.80%, cuya lectura implica que <b>la brecha de género actual es de 21.20%</b>.</br>
 La metodología de cálculo de esta puntuación está basada en la ponderación de varias métricas que miden la brecha existente en diversos ámbitos. En el siguiente gráfico se compara la puntuación obtenida por España en cada uno de los componentes principales, que dan lugar a la puntuación global de 78.8%:</p>
 
 <iframe
@@ -89,33 +88,26 @@ La metodología de cálculo de esta puntuación está basada en la ponderación 
   height="300"
 />
 </br>
-<g><b>Gráfico</b>: En este gráfico se combinan los datos cuantitativos mostrados junto con datos categóricos, las cuatro categorías en las que se divide la puntuación. El objetivo principal es establecer la comparación entre las cuatro categorías medidas sobre la paridad de género. El tipo de gráfico escogido en este primer caso es Stacked Bars. En las barras se combina la posición y la longitud proporcionando una comparación clara entre los cuatro valores. Cada uno de los datos se apila junto con su correspondiente gap, diferencia hasta alcanzar el 100%, dando lugar a un nivel superior de categorías (paridad = index, no paridad = gap). Me ha parecido que era una forma sencilla de poder enfatizar sobre la magnitud de la brecha de género. He colocado las categorías en el eje X y los valores en el eje Y porque las etiquetas de las categorías son bastante largas y rotarlas daría lugar a un gráfico incómodo de leer. </br>
-En el pie del gráfico se citan autor, fuente de datos y tecnología. </br>
-<b>Tecnología</b>:En este caso he utilizado datawrapper que lee 
-   
-  Quiero poder comparar entre las categorías y uso el stacked para incidir sobre el gap. Tecnología)</g>
-<p>Como podemos ver, la brecha actual está fundamentalmente motivada por la desigualdad existente en la participación política. Se contemplan en este factor …
-Tampoco es despreciable la brecha en materia económica. Entrarían en esta categoría las diferencias salariales, entre otros aspectos relacionados.
-El apartado de Salud y Supervivencia muestra un pequeño gap con la paridad absoluta, seguramente consecuencia de los casos de violencia machista aún no erradicados.
-Por último, en materia de Educación los datos muestran que la paridad es absoluta.</p>
+<g><b>Gráfico</b>: En este gráfico se combinan los datos cuantitativos mostrados junto con datos categóricos, las cuatro categorías en las que se divide la puntuación. El objetivo principal es establecer la comparación entre las cuatro categorías medidas sobre la paridad de género. El tipo de gráfico escogido en este primer caso es Stacked Bars. En las barras se combina la posición y la longitud proporcionando una comparación clara entre los cuatro valores. Cada uno de los datos se apila junto con su correspondiente gap, diferencia hasta alcanzar el 100%, dando lugar a un nivel superior de categorías (paridad = index, no paridad = gap). Me ha parecido que era una forma sencilla de poder enfatizar sobre la magnitud de la brecha de género. He colocado las categorías en el eje X y los valores en el eje Y porque las etiquetas de las categorías son bastante largas y rotarlas daría lugar a un gráfico incómodo de leer. He utilizado un único color, porque no me parecía artificial emplear uno para cada uno. El color verde en particular se corresponde con el color que le corresponde a España en la escala mundial de este índice. Otra opción que me planteé fue el uso del color en función del valor, pero me pareció que podría dar a entender que estaba marcando límites en cuanto a cumplimiento de objetivos, que no era mi intención. </br>
+<b>Tecnología</b>: En el pie del gráfico se citan autor, fuente de datos y tecnología. En este caso he utilizado datawrapper porque contaba con todas las funcionalidades que requería el gráfico muy fácilmente accesibles. En particular, el hecho de poder escribir las categorías del eje Y sobre las barras con sus correspondientes valores, en lugar de a su izquierda, me pareció la forma más óptima de utilizar el espacio. Con las otras tecnologías valoradas esta opción no era fácil de encontrar o no existía. </g>
+<p>Como podemos ver, la brecha actual está fundamentalmente motivada por la desigualdad existente en la participación política. Se contemplan en este factor la cuota de mujeres en la actividad política, parlamento, ministerios y presidencia del estado. Tampoco es despreciable la brecha de la participación económica. Entrarían en esta categoría las diferencias salariales por trabajos similares y las diferencias en la tasa de desempleo entre hombres y mujeres, entre otros aspectos relacionados. El apartado de Salud y Supervivencia muestra un pequeño gap con la paridad absoluta, consecuencia de los casos de violencia de género aún no erradicados en nuestro país. Por último, en materia de Educación los datos muestran que la paridad es absoluta.</p>
 
 <h2>Progreso</h2>
-
 <p>Desde su creación en 2006, España ha sido incluida en todas las ediciones del Índice Global de Brecha de Género, lo que proporciona una serie temporal con un número interesante de muestras para analizar. Lo hacemos a continuación:</p>
-
 <div id="viz1"></div>
 <br />
 
-<br />
-<g>(Línea continuidad. Tecnología)</g>
-<p>Como vemos, la puntuación de nuestro país ha ido mejorando a lo largo de estos últimos 16 años. La brecha ha disminuido un % en este periodo. Observamos, sin embargo, constantes altibajos que provocan que el ritmo de reducción de la brecha no sea muy ágil.
+<g><b>Gráfico</b>: Los datos son cuantitativos en los dos ejes, tiempo frente al valor del índice. El objetivo de la visualización es mostrar la tendencia en la serie del índice, por lo que la elección es el gráfico de líneas, que incide en en la posición y conexión de los puntos. He mantenido el mismo color para que quede claro que se está hablando de la misma información. El rango de valores está recortado a un intervalo que permita apreciar las variaciones en el tiempo del valor del índice.
+<b>Tecnología</b>: Este segundo gráfico está generado con D3plus. El motivo de mi elección es sobre todo el tooltip que incorpora, muy vistoso y útil para que el usuario pueda consultar los detalles. </g>
+<p>Como vemos, la puntuación de nuestro país ha ido mejorando a lo largo de estos últimos 16 años. La brecha ha disminuido casi un 6% en este periodo. Observamos, sin embargo, constantes altibajos que provocan que el ritmo de reducción de la brecha no sea muy ágil.</br>
 Un experimento interesante que se incluye en el reporte del Foro Económico Mundial es extrapolar la curva anterior para determinar en qué año se alcanzaría la paridad plena. Calculamos los datos para el caso de España:</p>
 
 <div id="viz2"></div>
 <br />
 
 <br />
-<g>(Línea y trama, color único. Tecnología)</g>
+<g><b>Gráfico</b>: Puesto que se trata de una extensión del gráfico anterior, la selección es la misma, gráfico de líneas para destacar la posición y la conexión entre los puntos. En este caso se presentan dos series distintas, la evolución real del índice, para la que mantengo el color, y la estimación de su evolución futura, para la que he escogido el mismo color pero en una tonalidad más oscura, para tratar de transmitir la consecución del objetivo del cierre de la brecha. Me ha parecido que la inclusión de la leyenda era demasiado redundante y por eso la he omitido.</br>
+Tecnología</b>: Por homogenidad, vuelvo a utilizar D3plus. El tooltip es esta vez aún más interesante puesto que diferencia entre las dos series, los datos reales y su estimación. Hay dos puntos de mejora en este gráfico que no he conseguido aplicar por desconocimiento de la herramienta y la poca información que he encontrado en Internet: la frecuencia de los ticks en el eje X y la trama de la línea de estimación. Sería deseable que no aparecieran todos los años para simplificar la información. Una trama discontinua en la serie de estimación sería la representación más idónea, puesto que está bastante establecida este tipo de interpolaciones. </g>
 <p>Suponiendo un ritmo de progreso como el actual, no será hasta el año 2083 cuando esta brecha desaparezca. Estaríamos hablando de varias generaciones más hasta que la desigualdad de género sea historia. El Foro Económico Mundial estima que, a nivel mundial, se necesitarán 132 años para alcanzar la paridad completa, en base a los datos calculados hasta 2022.</p>
 <p>Podríamos preguntarnos si este ritmo lento está relacionado con el hecho de que la brecha restante es relativamente pequeña. Es decir, si el progreso es lento, porque el margen de mejora no es extremadamente grande. Podemos contrastar esta hipótesis analizando los datos pertenecientes a todos los países incluidos en el informe. En el siguiente gráfico mostramos el índice de partida en 2006 frente al progreso experimentado desde entonces hasta 2022. Cada punto representa un determinado país de entre los XXX que se muestran, aquellos que se incluyen simultáneamente en los informes de 2006 y 2022.</p>
 <iframe
