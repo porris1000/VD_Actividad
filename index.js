@@ -35,15 +35,50 @@ var visualization = d3plus
   .color('index')
   .draw();
 
+var lines = [
+  { name: 'spain', year: 2006, index: 0.7319 },
+  { name: 'spain', year: 2007, index: 0.7444 },
+  { name: 'spain', year: 2008, index: 0.7281 },
+  { name: 'spain', year: 2009, index: 0.7345 },
+  { name: 'spain', year: 2010, index: 0.7554 },
+  { name: 'spain', year: 2011, index: 0.758 },
+  { name: 'spain', year: 2012, index: 0.7266 },
+  { name: 'spain', year: 2013, index: 0.7266 },
+  { name: 'spain', year: 2014, index: 0.7325 },
+  { name: 'spain', year: 2015, index: 0.742 },
+  { name: 'spain', year: 2016, index: 0.7384 },
+  { name: 'spain', year: 2017, index: 0.746 },
+  { name: 'spain', year: 2018, index: 0.746 },
+  { name: 'spain', year: 2019, index: 0.7705 },
+  { name: 'spain', year: 2020, index: 0.795 },
+  { name: 'spain', year: 2021, index: 0.788 },
+  { name: 'spain', year: 2022, index: 0.788 },
+];
+
+var visualization = d3plus
+  .viz()
+  .container('#viz1')
+  .data(lines)
+  .type('line')
+  .shape({ Line: { strokeWidth: 5 } })
+  .id('name')
+  .x('year')
+  .y('index')
+  .y({ range: [0.7, 0.8] })
+  .y({ scale: 'share' })
+  .title('España: Evolución del Índice de Brecha de Género')
+  .draw();
+
 var visualization = d3plus
   .viz()
   .container('#viz2')
-  .data(data1, '%')
+  .data(lines)
   .type('line')
-  .id('country')
-  .x('country')
-  .y('index', (d) => '${parseInt(d * 100)}%')
-  //.ytickFormat(d => "${parseInt(d * 100)}%")
-  .color('index')
-  .title('Aquí va el título')
+  .shape({ Line: { strokeWidth: 5 } })
+  .id('name')
+  .x('year')
+  .y('index')
+  .y({ range: [0.7, 0.8] })
+  .y({ scale: 'share' })
+  .title('España: Evolución del Índice de Brecha de Género')
   .draw();
