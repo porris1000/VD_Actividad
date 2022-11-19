@@ -36,7 +36,7 @@ var visualization = d3plus
   .y('index')
   .y({ range: [0.7, 0.8] })
   .y({ scale: 'share' })
-  .title('Evolución del Índice de Brecha de Género')
+  .title('España: Evolución del Índice de Brecha de Género')
   .title({
     sub: 'Chart: Ana Porras, Source: Expansión Datos Macro, Created with D3plus',
   })
