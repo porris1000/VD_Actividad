@@ -11,16 +11,16 @@ g {
   font-family: 'Trebuchet MS';
   text-align: justify;
   color: rgb(145, 145, 145);
-  font-size: 12px;
+  font-size: 13px;
 }
 p {
   font-family: sans-serif;
   text-align: justify;
-  font-size: 12px;
+  font-size: 14px;
 }
 #viz1,
 #viz2,
 #viz3 {
-  width: 100%;
+  width: 70%;
   height: 350px;
 }
