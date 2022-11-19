@@ -23,7 +23,7 @@ var data1 = [
 
 var attributes = [
   { name: 'España', hex: '#89cb0c' },
-  { name: 'Estimación', hex: '#89cb0c' },
+  { name: 'Estimación', hex: '#109618' },
 ];
 
 var visualization = d3plus
