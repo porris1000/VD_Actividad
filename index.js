@@ -37,6 +37,9 @@ var visualization = d3plus
   .y({ range: [0.7, 0.8] })
   .y({ scale: 'share' })
   .title('Evolución del Índice de Brecha de Género')
+  .title({
+    sub: 'Chart: Ana Porras, Source: Expansión Datos Macro, Created with D3plus',
+  })
   .legend(false)
   .attrs(attributes)
   .color('hex')
@@ -138,5 +141,8 @@ var visualization = d3plus
   .attrs(attributes)
   .color('hex')
   .title('España: Estimación del cierre de la Brecha de Género')
+  .title({
+    sub: 'Chart: Ana Porras, Source: Expansión Datos Macro, Created with D3plus',
+  })
   .draw();
-//legenda, grosor, color, trama
+//grosor, trama, xticks
