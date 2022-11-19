@@ -143,6 +143,6 @@ var visualization = d3plus
   .y({ range: [0.7, 1] })
   .y({ scale: 'share' })
   .legend(true)
-  .title('España: Evolución del Índice de Brecha de Género')
+  .title('España: Estimación del cierre de la Brecha de Género')
   .draw();
-//legenda, grosor, color
+//legenda, grosor, color, trama
