@@ -1,21 +1,22 @@
 h1 {
   font-family: sans-serif;
-  font-size: 28px;
+  font-size: 24px;
+  text-align: center;
 }
 h2 {
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
 g {
   font-family: 'Trebuchet MS';
   text-align: justify;
-  color: rgb(121, 121, 121);
+  color: rgb(145, 145, 145);
   font-size: 12px;
 }
 p {
   font-family: sans-serif;
   text-align: justify;
-  font-size: 14px;
+  font-size: 12px;
 }
 #viz1,
 #viz2,
