@@ -21,32 +21,6 @@ var data1 = [
   { name: 'España', year: 2022, index: 0.788 },
 ];
 
-var attributes = [
-  { name: 'España', hex: '#89cb0c' },
-  { name: 'Estimación', hex: '#109618' },
-];
-
-var visualization = d3plus
-  .viz()
-  .container('#viz1')
-  .data(data1)
-  .type('line')
-  .id('name')
-  .x('year')
-  .x({ label: 'Año' })
-  .y('index')
-  .y({ range: [0.7, 0.8] })
-  .y({ scale: 'share' })
-  .y({ label: 'Índice Global de Brecha de Género' })
-  .title('España: Evolución del Índice de Brecha de Género')
-  .title({
-    sub: 'Chart: Ana Porras, Source: Expansión Datos Macro, Created with D3plus',
-  })
-  .legend(false)
-  .attrs(attributes)
-  .color('hex')
-  .draw();
-
 var data2 = [
   { name: 'España', year: 2006, index: 0.7319 },
   { name: 'España', year: 2007, index: 0.7444 },
@@ -129,10 +103,38 @@ var data2 = [
   { name: 'Estimación', year: 2083, index: 1.0019 },
 ];
 
+var attributes = [
+  { name: 'España', hex: '#89cb0c' },
+  { name: 'Estimación', hex: '#109618' },
+];
+
+var visualization = d3plus
+  .viz()
+  .container('#viz1')
+  .data(data1)
+  .data({ stroke: { width: 3 } })
+  .type('line')
+  .id('name')
+  .x('year')
+  .x({ label: 'Año' })
+  .y('index')
+  .y({ range: [0.7, 0.8] })
+  .y({ scale: 'share' })
+  .y({ label: 'Índice Global de Brecha de Género' })
+  .title('España: Evolución del Índice de Brecha de Género')
+  .title({
+    sub: 'Chart: Ana Porras, Source: Expansión Datos Macro, Created with D3plus',
+  })
+  .legend(false)
+  .attrs(attributes)
+  .color('hex')
+  .draw();
+
 var visualization = d3plus
   .viz()
   .container('#viz2')
   .data(data2)
+  .data({ stroke: { width: 3 } })
   .type('line')
   .id('name')
   .x('year')
