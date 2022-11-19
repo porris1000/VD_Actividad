@@ -19,8 +19,7 @@ p {
   font-size: 14px;
 }
 #viz1,
-#viz2,
-#viz3 {
+#viz2 {
   width: 100%;
   height: 350px;
 }
