@@ -50,6 +50,9 @@
 <b>Google Sheets (datos)</b>: 
 <a href="https://docs.google.com/spreadsheets/d/1sqpe8kDecA85DJPKk397veuneuHjcKDbOKWySsyRiiY/edit#gid=587797660">https://docs.google.com/spreadsheets/d/1sqpe8kDecA85DJPKk397veuneuHjcKDbOKWySsyRiiY/edit#gid=587797660</a
   ><br />
+<b>Notebook</b>: 
+<a href="https://colab.research.google.com/drive/1VZgPJmIn5jbLa4njBcL7bQvzFiIANFfn#scrollTo=SIEwQ6egSWv1">https://colab.research.google.com/drive/1VZgPJmIn5jbLa4njBcL7bQvzFiIANFfn#scrollTo=SIEwQ6egSWv1</a
+  ><br />
 </p>
 
 <h1>¿Es España un país machista?</h1>
@@ -66,7 +69,7 @@ Los datos han sido obtenidos de la web Datos Macro de Expansión y, en el caso d
     <li>Objetivo: Mi objetivo es presentar los datos. Pueden existir determinadas hipótesis acerca de la desigualdad de género en España, pero resulta poco conocida la magnitud de esta diferencia. Entiendo que, en este sentido, la audiencia podría preguntarse en qué ámbitos hay una mayor o menor desigualdad, cuál ha sido su evolución a lo largo de los años y también cuál es la situación en otros países para poder comparar los datos del caso español. En la introducción ya expongo estas preguntas de manera explícita para que el lector conozca a priori el objetivo del análisis a continuación.</li>
     <li>Mensaje: El objetivo será transmitido a través de la presentación de los datos relevantes que existen al respecto. Expondré métricas concretas la distancia a la paridad plena. La forma en la que se presentarás dichas métricas será fundamentalmente gráfica, visual, y acompañada de un texto explicativo en el que se destacan los principales puntos clave de las visualizaciones incluidas.</li>
   </ul>
-  <b>Tecnología</b>: Las visualizaciones incluidas se han generado utilizando tres herramientas distintas, Datawrapper, D3plus y Google Sheets. En cada gráfico se especifica la herramienta particular con la que ha sido creado. Todos los dato utilizados los he almacenado en un archivo Google Sheets, cuyo enlace se incluye al incio de esta presentación. Lo he tenido que dividir en dos archivos porque se me quedaba colgado con frecuencia. El primero es al que se conectan los gráficos y el segundo es el que se conecta con la web de Expansión Datos Macro para obtener los datos del Índice Global de Brecha de Género. La información por subíndice, sin embargo, no me ha sido posible obtenerla de ninguna web y la he copiado directamente del informe de 2022 publicado por The World Economic Forum. 
+  <b>Tecnología</b>: Las visualizaciones incluidas se han generado utilizando tres herramientas distintas, Datawrapper, D3plus y Google Sheets. En cada gráfico se especifica la herramienta particular con la que ha sido creado. Adjunto además el enlace a un notebook con algunos gráficos extra generados en Python. Todos los dato utilizados los he almacenado en un archivo Google Sheets, cuyo enlace se incluye al incio de esta presentación. Lo he tenido que dividir en dos archivos porque se me quedaba colgado con frecuencia. El primero es al que se conectan los gráficos y el segundo es el que se conecta con la web de Expansión Datos Macro para obtener los datos del Índice Global de Brecha de Género. La información por subíndice, sin embargo, no me ha sido posible obtenerla de ninguna web y la he copiado directamente del informe de 2022 publicado por The World Economic Forum. 
 </g>
 </br>
 
@@ -109,7 +112,7 @@ Un experimento interesante que se incluye en el reporte del Foro Económico Mund
 <br />
 
 <g><b>Gráfico</b>: Puesto que se trata de una extensión del gráfico anterior, la selección es la misma, gráfico de líneas para destacar la posición y la conexión entre los puntos. En este caso se presentan dos series distintas, la evolución real del índice, para la que mantengo el color, y la estimación de su evolución futura, para la que he escogido el mismo color pero en una tonalidad más oscura, para tratar de transmitir la consecución del objetivo del cierre de la brecha. Me ha parecido que la inclusión de la leyenda era demasiado redundante y por eso la he omitido.</br>
-Tecnología</b>: Por homogenidad, vuelvo a utilizar D3plus. El tooltip es esta vez aún más interesante puesto que diferencia entre las dos series, los datos reales y su estimación. He especificado los años a mostrar en el eje X porque son muchos y el gráfico quedaba demasiado recargado. Hay un punto de mejora en este gráfico que no he conseguido aplicar por desconocimiento de la herramienta y la poca información que he encontrado en Internet: la trama de la línea de estimación. Una trama discontinua en la serie de estimación sería la representación más idónea, puesto que está bastante establecida para este tipo de interpolaciones. </g>
+Tecnología</b>: Por homogenidad, vuelvo a utilizar D3plus. El tooltip es esta vez aún más útil puesto que diferencia entre las dos series, los datos reales y su estimación. He especificado los años a mostrar en el eje X porque son muchos y el gráfico quedaba demasiado recargado. Hay un punto de mejora en este gráfico que no he conseguido aplicar por desconocimiento de la herramienta y la poca información que he encontrado en Internet: la trama de la línea de estimación. Una trama discontinua en la serie de estimación sería la representación más idónea, puesto que está bastante establecida para este tipo de interpolaciones. </g>
 <p>Suponiendo un ritmo de progreso como el actual, no será hasta el año 2082 cuando esta brecha desaparezca. Estaríamos hablando de varias generaciones más hasta que la desigualdad de género sea historia. El Foro Económico Mundial estima que se necesitarán 132 años para alcanzar la paridad completa a nivel mundial, en base a los datos calculados hasta 2022.</p>
 <p>Podríamos preguntarnos si este ritmo lento está relacionado con el hecho de que la brecha restante es relativamente pequeña. Es decir, si el avance es lento, porque el margen de mejora no es extremadamente grande. Podemos contrastar esta hipótesis analizando los datos pertenecientes a todos los países incluidos en el informe. En el siguiente gráfico mostramos el índice de partida en 2006 frente al progreso experimentado desde entonces hasta 2022. Cada punto representa un determinado país de entre los 105 que se muestran, aquellos que se incluyen simultáneamente en las ediciones de 2006 y 2022.</p>
 <iframe
@@ -137,23 +140,18 @@ Tecnología</b>: Por homogenidad, vuelvo a utilizar D3plus. El tooltip es esta v
 <h2>Comparativa</h2>
 
 <p>En el último gráfico ya hemos podido esbozar el contexto mundial de la brecha de género. No obstante, en este apartado hacemos una comparativa explícita. España ocupa el puesto 17º en el ranking mundial de paridad, en una comparativa frente a otros 146 países de todos los continentes. Se trata, por tanto, de una de las primeras posiciones, lo que pone de manifiesto que queda mucho camino por recorrer a nivel mundial, más de lo que queda en España en particular.</p>
-<p>Aunque el puesto sea bastante alto, existen 16 países con trayectorias más exitosas hacia la eliminación de desigualdades entre hombres y mujeres. En el siguiente gráfico comparamos las puntuaciones obtenidas por el TOP 20 de este ranking:</p>
-<iframe style="width: 0; min-width: 100% !important; border: none" height="648" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vShhK2kx_oOet2AvBn5j7T974bxwAUP--w7qFOZPtrWAk5jxfdOaz2gJSwzGQEKkj3rAjXwFwZ7rXM6/pubchart?oid=486106883&amp;format=interactive"></iframe>
-
+<p>Aunque el puesto sea bastante alto, existen 16 países con trayectorias más exitosas hacia la eliminación de desigualdades entre hombres y mujeres. En el siguiente gráfico comparamos las puntuaciones obtenidas por el TOP 20 de este ranking. Otras comparativas de interés se pueden encontrar aquí: </br>
+<a href="https://colab.research.google.com/drive/1VZgPJmIn5jbLa4njBcL7bQvzFiIANFfn#scrollTo=SIEwQ6egSWv1">https://colab.research.google.com/drive/1VZgPJmIn5jbLa4njBcL7bQvzFiIANFfn#scrollTo=SIEwQ6egSWv1</a></p>
+<iframe width="712" height="542" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vShhK2kx_oOet2AvBn5j7T974bxwAUP--w7qFOZPtrWAk5jxfdOaz2gJSwzGQEKkj3rAjXwFwZ7rXM6/pubchart?oid=486106883&amp;format=interactive"></iframe>
+</br>
 <g><b>Gráfico</b>: El objetivo es establecer la comparación, por lo que selecciono el gráfico de barras para esta visualización. La longitud de las barras expresa de forma clara el valor de la variable numérica que se pretende comparar, la magnitud del índice. Esta vez las barras se presentan ordenadas puesto que estamos hablando de un ranking. Elijo la visualización con la variable categórica, país, en el eje Y, para facilitar la lectura del gráfico, ya que además, el número de países es bastante elevado. Utilizo el mismo color verde claro para destacar el dato que corresponde a España y para el resto un valor verde más oscuro para indicar que los países incluidos en este gráfico ocupan los primeros puestos a nivel mundial. Este color es el mismo que se usa para representar el valor máximo de la escala del siguiente gráfico, con lo que quedan ligados a través del atributo color. </br>
 <b>Tecnología</b>: El gráfico se ejecuta con Google Sheets. De entre las opciones valoradas es el que más me facilitaba la posibilidad de destacar claramente la barra con el dato correspondiente a España. </g>
 <p>Ningún país ha alcanzado aún la paridad completa. El líder absoluto es Islandia, el único país cuya brecha es inferior al 10%. También a la cabeza encontramos otros países escandinavos como Finlandia, Noruega y Suecia. Nueva Zelanda completa el TOP 5. Del continente africano destacan las paridades alcanzadas en países como Ruanda, Namibia y Sudáfrica, mientras que de América encontramos a Nicaragua y Costa Rica. Por otra parte, Filipinas es el único reprentante del continente asiático en estos primeros puestos del ranking de paridad. El resto de países son también Europeos, entre los que se encuentra España.</p>
 <p>Para terminar, presentamos también el mapa completo del Índice de Brecha de Género en 2022 que nos permite conocer en detalle el estado actual en gran parte del mundo, 146 países en total:</p>
 <h2>Brecha de género en el mundo - 2022</h2>
-<iframe
-  style="width: 0; min-width: 100% !important; border: none"
-  height="509"
-  seamless
-  frameborder="0"
-  scrolling="no"
-  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vShhK2kx_oOet2AvBn5j7T974bxwAUP--w7qFOZPtrWAk5jxfdOaz2gJSwzGQEKkj3rAjXwFwZ7rXM6/pubchart?oid=1128193635&amp;format=interactive"
-></iframe>
+<iframe width="741" height="502" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vShhK2kx_oOet2AvBn5j7T974bxwAUP--w7qFOZPtrWAk5jxfdOaz2gJSwzGQEKkj3rAjXwFwZ7rXM6/pubchart?oid=1128193635&amp;format=interactive"></iframe>
 <br/>
+</br>
 <g><b>Gráfico</b>: El objetivo es establecer la comparación completa del Índice Global de Brecha de Género de 2022, para satisfacer la curiosidad del lector, que quizás se haya podido quedar con ganas de conocer el dato en otro país en particular o simplemente de conocer la situación de manera global. Como se trata de muchos países, en esta ocasión el gráfico de barras no es una opción y escojo preferentemente la creación de un mapa coroplético. Esta visualización es la que mejor encaja en la presentación de una comparativa sobre países a lo largo de todo el mundo. Los países sin color se corresponden con aquellos no incluidos en la última edición del World Economic Forum, por falta de datos. Este mismo mapa es el que escoje Expansión Datos Macro en su entrada con la información de este índice. La escala de colores rojo - amarillo - verde es ampliamente entendida en España como una graduación entre mal y bien, motivo por el que la elijo para que sean fácilmente identificables las regiones con mayores desigualdades (mal) y como mayor paridad (bien). </br>
 <b>Tecnología</b>: El gráfico se ejecuta con Google Sheets. Me gusta especialmente que incluye la legenda de la escala de colores y el tooltip con el que cuenta, que marca sobre esta escala el valor del país que se selecciona. Por otra parte, me permite mostrar los países con su nombre en Español, lo que me parecía más lógico ya que el resto del trabajo está en este idioma. Sin embargo, también tiene algunos inconvenientes, funciona bastante lento y para este gráfico es que Google Sheets no permite incluir título, por lo que he tenido que añadirlo en el documento html. </g>
 
@@ -176,5 +174,8 @@ Tecnología</b>: Por homogenidad, vuelvo a utilizar D3plus. El tooltip es esta v
 7. D3plus LinePlot: <a href="https://d3plus.org/?path=/story/advanced-lineplot--line-labels/">https://d3plus.org/?path=/story/advanced-lineplot--line-labels</a
 ><br />
 8. D3plus Wiki <a href="https://github.com/d3plus/d3plus/wiki">https://github.com/d3plus/d3plus/wiki</a>
+</p>
+9. seaborn barplot <a href="https://seaborn.pydata.org/generated/seaborn.barplot.html">https://seaborn.pydata.org/generated/seaborn.barplot.html</a>
+9. seaborn palette <a href="https://seaborn.pydata.org/generated/seaborn.color_palette.html#seaborn.color_palette">https://seaborn.pydata.org/generated/seaborn.color_palette.html#seaborn.color_palette</a>
 </p>
 
