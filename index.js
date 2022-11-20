@@ -158,4 +158,3 @@ var visualization = d3plus
   .attrs(attributes)
   .color('hex')
   .draw();
-//trama, xticks
