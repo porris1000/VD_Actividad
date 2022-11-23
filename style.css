@@ -10,12 +10,12 @@ g {
   font-family: 'Trebuchet MS';
   text-align: justify;
   color: rgb(145, 145, 145);
-  font-size: 13px;
+  font-size: 15px;
 }
 p {
   font-family: sans-serif;
   text-align: justify;
-  font-size: 14px;
+  font-size: 15px;
 }
 #viz1,
 #viz2 {
